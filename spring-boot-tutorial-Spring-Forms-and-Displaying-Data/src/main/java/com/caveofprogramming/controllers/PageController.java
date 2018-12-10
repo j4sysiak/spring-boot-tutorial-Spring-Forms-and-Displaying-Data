@@ -25,9 +25,9 @@ public class PageController {
 		
 		modelAndView.setViewName("app.addStatus");
 		
-		//StatusUpdate statusUpdate = new StatusUpdate("Hello from the model", new Date());
+		 StatusUpdate statusUpdate = new StatusUpdate("Hello from the model", new Date());
 		 
-		//modelAndView.getModel().put("statusUpdate", statusUpdate);
+		 modelAndView.getModel().put("statusUpdate", statusUpdate);
 		
 		return modelAndView;
 	}
