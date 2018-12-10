@@ -25,28 +25,30 @@ public class PageController {
 		return "app.about";
 	}
 	
-	@RequestMapping(value="/addstatus", method=RequestMethod.GET)
+	
+	@RequestMapping(value = "/addstatus", method = RequestMethod.GET)
 	ModelAndView addStatus(ModelAndView modelAndView) {
-		
+
 		modelAndView.setViewName("app.addStatus");
-		
-		 StatusUpdate statusUpdate = new StatusUpdate();
-		 
-		 modelAndView.getModel().put("statusUpdate", statusUpdate);
-		
+
+		StatusUpdate statusUpdate = new StatusUpdate();
+
+		modelAndView.getModel().put("statusUpdate", statusUpdate);
+
 		return modelAndView;
 	}
 	
 	
-	@RequestMapping(value="/addstatus", method=RequestMethod.POST)
-	ModelAndView addStatus(ModelAndView modelAndView, StatusUpdate statusUpdate ) {
-		
+
+ 	@RequestMapping(value = "/addstatus", method = RequestMethod.POST)
+	ModelAndView addStatus(ModelAndView modelAndView, StatusUpdate statusUpdate) {
+
 		modelAndView.setViewName("app.addStatus");
 		
 		statusUpdateService.save(statusUpdate);
-		
+
 		return modelAndView;
-	}
+ 	} 
 }
 
 
