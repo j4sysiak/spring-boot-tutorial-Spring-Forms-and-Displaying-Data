@@ -7,7 +7,7 @@
 
 	<div class="col-md-8 col-md-offset-2">
 		
-		<c:out value="${statusUpdate}" />
+	  <%--<c:out value="${statusUpdate}" /> --%>
 	
 		<div class="panel panel-default">
 		
