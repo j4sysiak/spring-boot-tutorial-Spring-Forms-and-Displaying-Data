@@ -7,6 +7,9 @@
 
 	<div class="col-md-8 col-md-offset-2">
 		
+		Request statusUpdate attribute: <%= request.getAttribute("statusUpdate") %><br/>
+		JSP object: <%= this %><br/>
+	    JSP class: <%= this.getClass() %><br/>
 	
 		<div class="panel panel-default">
 		
