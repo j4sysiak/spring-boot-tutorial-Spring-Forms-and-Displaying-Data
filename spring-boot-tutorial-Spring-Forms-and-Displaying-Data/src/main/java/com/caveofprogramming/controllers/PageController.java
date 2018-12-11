@@ -32,23 +32,31 @@ public class PageController {
 		modelAndView.setViewName("app.addStatus");
 
 		StatusUpdate statusUpdate = new StatusUpdate();
+		
+		StatusUpdate latestStatusUpdate = statusUpdateService.getLatest();
 
 		modelAndView.getModel().put("statusUpdate", statusUpdate);
+		modelAndView.getModel().put("latestStatusUpdate", latestStatusUpdate);
 
 		return modelAndView;
 	}
 	
 	
 
- 	@RequestMapping(value = "/addstatus", method = RequestMethod.POST)
+	@RequestMapping(value = "/addstatus", method = RequestMethod.POST)
 	ModelAndView addStatus(ModelAndView modelAndView, StatusUpdate statusUpdate) {
 
 		modelAndView.setViewName("app.addStatus");
 		
 		statusUpdateService.save(statusUpdate);
+		
+		StatusUpdate latestStatusUpdate = statusUpdateService.getLatest();
+		modelAndView.getModel().put("latestStatusUpdate", latestStatusUpdate);
+		
 
 		return modelAndView;
- 	} 
+	}
+	
 }
 
 
