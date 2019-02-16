@@ -1,10 +1,10 @@
-package com.caveofprogramming.service;
+package pl.jaceksysiak.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.caveofprogramming.model.StatusUpdate;
-import com.caveofprogramming.model.StatusUpdateDao;
+import pl.jaceksysiak.model.StatusUpdate;
+import pl.jaceksysiak.model.StatusUpdateDao;
 
 @Service
 public class StatusUpdateService {
